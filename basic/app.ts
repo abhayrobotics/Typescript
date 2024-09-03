@@ -1,6 +1,11 @@
 console.log("Pizza App")
 
-const menu =[
+type Pizza ={
+    name:string
+    price:number
+    
+}
+const menu1 =[
     {name:"Pepperoni", price: 10},
     {name:"Hawaiian", price: 9},
     {name:"Margherita", price: 8},
@@ -9,33 +14,33 @@ const menu =[
 
 let cashInRegister:number = 100;
 const orderQueue =[];
-let nextOrderId =101;
+let nextOrderId:number =101;
 
 // Exercise 1: Create addNewPizza function
-const addNewPizza=(name,price) =>{
+const addNewPizza=(pizzaObject:Pizza) =>{
 
-    menu.push({name,price});
+    menu1.push(pizzaObject);
 }
 
-addNewPizza("veg","25")
-console.log(menu)
+addNewPizza({name:"veg",price:25})
+console.log(menu1)
 
 // Exercise 2: Create placeOrder function that add money in register and add new queue
 
 
 const placeOrder =(item)=>{
 
-    for( let x in menu){
-        console.log(menu[x])
-        if(menu[x].name===item){
-            cashInRegister =cashInRegister+ menu[x].price;
+    for( let x in menu1){
+        console.log(menu1[x])
+        if(menu1[x].name===item){
+            cashInRegister =cashInRegister+ menu1[x].price;
             order={
                 id:nextOrderId++,
-                pizza: menu[x],
+                pizza: menu1[x],
                 status:"ordered"
             }
             orderQueue.push(order)
-            return menu[x];
+            return menu1[x];
         }
     }
     
@@ -57,5 +62,5 @@ const completeOrder =(id:number)=>{
     
 }
 
-completeOrder("101")
+completeOrder("1")
 console.log(orderQueue,cashInRegister)
