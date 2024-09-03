@@ -42,6 +42,7 @@ const placeOrder =(item)=>{
 }
 placeOrder("Hawaiian");
 
+
 console.log(orderQueue,cashInRegister)
 
 // Exercise 3: create complete order
