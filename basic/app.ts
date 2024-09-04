@@ -5,6 +5,12 @@ type Pizza ={
     price:number
     
 }
+type Ordertype ={
+    id:number
+    pizza:Pizza
+    status:string
+}
+
 const menu1 =[
     {name:"Pepperoni", price: 10},
     {name:"Hawaiian", price: 9},
@@ -13,7 +19,7 @@ const menu1 =[
 ]
 
 let cashInRegister:number = 100;
-const orderQueue =[];
+const orderQueue:Ordertype[] =[];
 let nextOrderId:number =101;
 
 // Exercise 1: Create addNewPizza function
@@ -34,7 +40,7 @@ const placeOrder =(item)=>{
         console.log(menu1[x])
         if(menu1[x].name===item){
             cashInRegister =cashInRegister+ menu1[x].price;
-            order={
+            let order:Ordertype={
                 id:nextOrderId++,
                 pizza: menu1[x],
                 status:"ordered"
@@ -62,5 +68,5 @@ const completeOrder =(id:number)=>{
     
 }
 
-completeOrder("1")
+completeOrder(101)
 console.log(orderQueue,cashInRegister)

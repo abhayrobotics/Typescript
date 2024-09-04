@@ -15,26 +15,38 @@ let isAlive: boolean = true;
 type  Food =string;
 
 // Challenge, create a custom defination of type
+type Address ={
+    street:string
+    city:string
+    pin:number
+}
 type Person = {
     name: string
     age: number
     isStudent: boolean
-    address:{
-        street:string
-        city:string
-        pin:number
-    }
+    address?:Address
 }
 
 let person1:Person={
     name:"Raj",
     age:30,
-    isStudent:true
+    isStudent:true,
+    address:{
+        street:"MG ROAD",
+        city:"KOLKATA",
+        pin:828210
+    }
 }
 
 // you can check the error
-// let person2:Person ={
-//     name:"ABhay",
-//     age:30,
-//     isstudent:false
-// }   
+let person2:Person ={
+    name:"ABhay",
+    age:30,
+    isStudent:false
+}   
+
+// Array
+// data type is array of number
+let marks:number[] =[20,23,45,53]
+
+ let array2:Person[] = [person1,person2]
