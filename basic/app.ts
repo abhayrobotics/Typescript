@@ -17,6 +17,13 @@ const menu1:Pizza[] =[
     {name:"Margherita", price: 8},
 
 ]
+// ?method 2
+// const menu2:Array<Pizza> =[
+//     {name:"Pepperoni", price: 10},
+//     {name:"Hawaiian", price: 9},
+//     {name:"Margherita", price: 8},
+
+// ]
 
 let cashInRegister:number = 100;
 const orderQueue:Ordertype[] =[];
