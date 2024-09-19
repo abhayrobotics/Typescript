@@ -11,7 +11,7 @@ type Ordertype ={
     status:string
 }
 
-const menu1 =[
+const menu1:Pizza[] =[
     {name:"Pepperoni", price: 10},
     {name:"Hawaiian", price: 9},
     {name:"Margherita", price: 8},
