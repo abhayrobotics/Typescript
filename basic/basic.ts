@@ -50,3 +50,13 @@ let person2:Person ={
 let marks:number[] =[20,23,45,53]
 
  let array2:Person[] = [person1,person2]
+
+//  literal Data type 
+// value specific data type is called literal data type,and hence cannot be changed even for let
+const name1: string = "Abhay" ;
+let name2:"raj" = "raj";
+// name1 = "sd"
+
+type Friends = "Abhay" | "Deepak" | "Raj"
+
+let hero :Friends = "Raj"
