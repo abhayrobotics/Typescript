@@ -11,8 +11,6 @@ type Ordertype = {
   status: "Completed" | "ordered";
 };
 
-
-
 const menu1: Pizza[] = [
   {id:1,  name: "Pepperoni", price: 10 },
   { id:2, name: "Hawaiian", price: 9 },
